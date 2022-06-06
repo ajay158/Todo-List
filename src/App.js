@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
 import Form from "./Components/Form";
-import TodoList from './Components/TodoList'
+import TodoList from './Components/TodoList';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <h1>Ajay's TODO-List </h1>
       </header>
       <Form inputText={inputText} todo={todo} setTodo={setTodo} setInputText={setInputText} />
-      <TodoList todo={todo} />
+      <TodoList setTodo={setTodo} todo={todo} />
     </div>
   );
 }
