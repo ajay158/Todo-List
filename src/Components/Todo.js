@@ -1,14 +1,14 @@
 import React from 'react'
 
-function Todo({ text, todo, todos, setTodo }) {
+function Todo({ text, todo, todos, setTodos }) {
 
     //Events Handler
     const deleteHandler = () => {
-        setTodo(todos.filter((el) => el.id !== todo.id))
+        setTodos(todos.filter((el) => el.id !== todo.id))
     }
 
     const completeHandler = () => {
-        setTodo(todo.map((item) => {
+        setTodos(todos.map((item) => {
             if (item.id === todo.id) {
                 return {
                     ...item, completed: !item.completed
